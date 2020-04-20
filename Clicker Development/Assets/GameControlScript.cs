@@ -9,15 +9,21 @@ public class GameControlScript : MonoBehaviour {
 	public Button ribbonButton, ballButton, milkButton;
 	public GameObject ribbonSoldText, ballSoldText, milkSoldText;
 	public Text ribbonPriceText, ballPriceText, milkPriceText;
+//adding text to buttons in order to deactivate them
+	public Text ribbonButtonText, ballButtonText, milkButtonText;
 
 	// Game panel objects
 	public GameObject hairRibbon, ballOfYarn, milk;
 	public Text strokeText;
 	public int strokesAmount;
+// Making it so it adds a variable instead of just one every click.
+	public int strokesMultiplier;
+// Making it so the button tells you how much you get.
+	public Text CatButtonText;
 
 	// Common variables
 	private bool isRibbonSold, isBallSold, isMilkSold;
-	public int ribbonPrice = 10, ballPrice = 20, milkPrice = 30;
+	public int ribbonPrice = 10, ballPrice = 30, milkPrice = 60;
 
 	// Use this for initialization
 	void Start () {
@@ -37,27 +43,34 @@ public class GameControlScript : MonoBehaviour {
 		milkSoldText.gameObject.SetActive (false);
 
 		// set prices for goods
-		ribbonPriceText.text = ribbonPrice.ToString() + " Strokes";
-		ballPriceText.text = ballPrice.ToString() + " Strokes";
-		milkPriceText.text = milkPrice.ToString() + " Strokes";
+		ribbonPriceText.text = ribbonPrice.ToString() + " Clicks";
+		ballPriceText.text = ballPrice.ToString() + " Clicks";
+		milkPriceText.text = milkPrice.ToString() + " Clicks";
+		
+// set strokesMultiplier to 1
+		strokesMultiplier = 1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 		// display gained number of strokes
-		strokeText.text = strokesAmount + " Strokes";
+		strokeText.text = strokesAmount + " Clicks";
 
 		// check if you have enough strokes to buy particular good
 		// and it is not sold yet
 		DoYouHaveEnoughStrokesToBuySmth();
+// set the cat button value
+		CatButtonText.text = "Click for " + strokesMultiplier.ToString() + " points";
+//		GameObject.Find("CatButton").GetComponentInChildren<Text>().text = "Click for " strokesAmount += strokesMultiplier " points";			
 					
 	}
 
-	// Increase strokes amount by 1 when kitten is clicked
+	// Increase strokes amount by 1 (now X) when kitten is strokeed
 	public void IncreaseStrokesAmount()
 	{
-		strokesAmount += 1;
+//		strokesAmount += 1;
+		strokesAmount += strokesMultiplier;
 	}
 
 	// sell ribbon
@@ -67,12 +80,17 @@ public class GameControlScript : MonoBehaviour {
 		hairRibbon.gameObject.SetActive (true);
 		// desrease strokes ammount by price of ribbon
 		strokesAmount -= ribbonPrice;
+// Set 2x multiplier
+		strokesMultiplier *= 2;
+
 		// set that ribbon is sold
 		isRibbonSold = true;
 		// display that ribbon is sold
 		ribbonSoldText.gameObject.SetActive (true);
 		// no need to show ribbons price any longer
 		ribbonPriceText.gameObject.SetActive (false);
+//disabling ribbon text that I added		
+		ribbonButtonText.gameObject.SetActive (false);
 	}
 
 	// sell ball
@@ -82,6 +100,8 @@ public class GameControlScript : MonoBehaviour {
 		ballOfYarn.gameObject.SetActive (true);
 		// desrease strokes ammount by price of ball
 		strokesAmount -= ballPrice;
+// Set 2x multiplier
+		strokesMultiplier *= 2;
 		// set that ball is sold
 		isBallSold = true;
 		// display that ball is sold
@@ -97,6 +117,8 @@ public class GameControlScript : MonoBehaviour {
 		milk.gameObject.SetActive (true);
 		// desrease strokes ammount by price of milk
 		strokesAmount -= milkPrice;
+// Set 2x multiplier
+		strokesMultiplier *= 2;
 		// set that milk is sold
 		isMilkSold = true;
 		// display that milk is sold
@@ -113,6 +135,7 @@ public class GameControlScript : MonoBehaviour {
 		// disable buy ribbon button if strokes is not enough
 		if (strokesAmount < ribbonPrice)
 			ribbonButton.interactable = false;
+
 
 		// disable buy ball button if strokes is not enough
 		if (strokesAmount < ballPrice)

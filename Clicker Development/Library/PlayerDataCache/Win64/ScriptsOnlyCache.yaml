@@ -49,21 +49,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11456}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 11510}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 12036}
+      Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 12172}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12870}
     - Class: 114
-      Script: {instanceID: 13624}
+      Script: {instanceID: 13626}
     - Class: 114
-      Script: {instanceID: 14234}
+      Script: {instanceID: 14236}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -259,7 +259,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 6b7f9113cbb4b8d31d3eff29737e6ab4
+      Hash: aa0ad64f548ababc4fd84f7ab98df194
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameControlScript
@@ -566,4 +566,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Scene01.unity
-  playerPath: C:/Users/jkrus/Desktop/Clicker Folder/Windows/Clicker Development.exe
+  playerPath: C:/Users/jkrus/Documents/GitHub/Idle-Development/Windows/Clicker Development.exe
