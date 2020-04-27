@@ -57,37 +57,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11496}
+      Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 11606}
     - Class: 114
-      Script: {instanceID: 11668}
+      Script: {instanceID: 11716}
     - Class: 114
-      Script: {instanceID: 12104}
+      Script: {instanceID: 12152}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12342}
     - Class: 114
-      Script: {instanceID: 12344}
+      Script: {instanceID: 12392}
     - Class: 114
-      Script: {instanceID: 12354}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12686}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12766}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 13162}
     - Class: 114
-      Script: {instanceID: 13958}
+      Script: {instanceID: 14006}
     - Class: 114
-      Script: {instanceID: 13992}
+      Script: {instanceID: 14040}
     - Class: 114
-      Script: {instanceID: 14082}
+      Script: {instanceID: 14130}
     - Class: 114
-      Script: {instanceID: 14430}
+      Script: {instanceID: 14478}
     - Class: 114
-      Script: {instanceID: 14650}
+      Script: {instanceID: 14698}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1180,4 +1180,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/BusinessTycoon/Scenes/Game.unity
-  playerPath: D:/jkrushal/Documents/GitHub/Idle-Development/Idle-Clicker-Kit/Windows/Idle-Clicker-Kit.exe
+  playerPath: C:/Users/jkrus/Documents/GitHub/Idle-Development/Idle-Clicker-Kit/Windows/Idle-Clicker-Kit.exe
